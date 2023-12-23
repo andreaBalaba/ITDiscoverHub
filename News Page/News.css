@@ -1,0 +1,404 @@
+/* CSS DEFAULTS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+header,
+main,
+footer {
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:not(:first-child) {
+  margin-top: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* CSS USED IN MULTIPLE ELEMENTS */
+
+.width-80 {
+  width: 80%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* PRIMARY CSS FLOW */
+
+html {
+  font-family: Poppins, Arial, Helvetica, Tahoma;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(160deg, #09032e 40%, #1608b2);
+  line-height: 1.5;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  height: 6rem;
+  padding: 2rem;
+  background-color: #09032e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 8px 6px -6px #0f0253;
+}
+
+.website-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.header-nav {
+  width: 70%;
+  max-width: 600px;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav a:not(.contact-us-link):hover {
+  color: #ee7214;
+}
+
+.current-page {
+  position: relative;
+  color: #ee7214;
+}
+
+.header-nav .current-page::after {
+  content: url("../Images - IT Discover Hub/current-page-icon.png");
+  position: absolute;
+  left: -16px;
+  bottom: -16px;
+}
+
+.header-nav .contact-us-link {
+  background-color: #d80027;
+  padding: 0.5em 1.5em;
+  border-radius: 8px;
+}
+
+.header-nav .contact-us-link:hover {
+  color: #070320;
+}
+
+main {
+  max-width: 1600px;
+  padding: 4rem 10%;
+  margin-bottom: 2rem;
+}
+
+.from-to-current-page {
+  margin-bottom: 1.5rem;
+}
+
+.from-page {
+  margin-right: 0.5rem;
+}
+
+.from-to-current-page .current-page {
+  margin-left: 0.5rem;
+}
+
+.search-bar-container {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 2rem auto 4rem;
+}
+
+.search-bar {
+  display: block;
+  background-color: #e1d3ca;
+  color: black;
+  border-radius: 10px;
+  width: 40ch;
+  padding: 0.7em 0.5em 0.7em 3em;
+  border: none;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: black;
+}
+
+.search-bar-container::before {
+  content: "\f002";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1em;
+  color: black;
+  left: 1em;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.news-img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.main-content-left .news-img {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 1.5rem;
+}
+
+.news-article-left:not(:last-child) {
+  border-bottom: 1px solid #a5a5a5;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+.watch-link {
+  background-color: #2351f5;
+}
+
+.watch-link:hover {
+  background-color: #072db4;
+}
+
+.news-article-left .watch-link {
+  padding: 0.5em 3em;
+}
+
+.news-article-left .watch-link-duration-container {
+  margin-bottom: 1.5rem;
+}
+
+.watch-duration {
+  margin-left: 1rem;
+}
+
+.news-article-left-title {
+  margin-bottom: 1rem;
+}
+
+.news-article-left-text {
+  line-height: 1.7;
+}
+
+.news-article-right {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.news-article-right .news-img {
+  width: 100%;
+  height: 170px;
+}
+
+.news-article-right .watch-link {
+  padding: 0.3em 3em;
+}
+
+.news-article-right .watch-link-duration-container {
+  margin-bottom: 1rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.news-article-right:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.watch-link.pink {
+  background-color: #f56767;
+}
+
+.watch-link.orange {
+  background-color: #ff7c32;
+}
+
+.watch-link.green {
+  background-color: #23a54f;
+}
+
+.watch-link.magenta {
+  background-color: #9921c3;
+}
+
+.watch-link.pink:hover {
+  background-color: #eb3d3d;
+}
+
+.watch-link.orange:hover {
+  background-color: #ca5510;
+}
+
+.watch-link.green:hover {
+  background-color: #0a8031;
+}
+
+.watch-link.magenta:hover {
+  background-color: #67068a;
+}
+
+.subscribe-section {
+  max-width: 1600px;
+  padding: 0 10% 5rem;
+  margin: 0 auto;
+}
+
+.subscribe-div {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+}
+
+.subscribe-div-text {
+  max-width: 50%;
+}
+
+.subscription-form {
+  background-color: black;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.subscription-form input[type="email"] {
+  min-width: 11ch;
+  background-color: black;
+  color: white;
+  padding: 5px 0.5em 5px 1em;
+  border: none;
+  outline: none;
+}
+
+.subscription-form .submit-button {
+  background-color: #d80027;
+  color: black;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscription-form > .submit-button:hover {
+  color: white;
+}
+
+.footer-section {
+  background-color: white;
+  color: black;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-navs-and-information {
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.about-us-div,
+.soc-meds-nav {
+  min-width: max-content;
+}
+
+.about-us-div nav {
+  margin-top: 1rem;
+}
+
+.soc-meds-nav {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.soc-meds-nav .soc-med-icon {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.line-separator {
+  border-bottom: 2px solid black;
+  margin: 2rem 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+}
