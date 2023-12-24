@@ -53,7 +53,7 @@ select {
   font: inherit;
 }
 
-/* CSS USED IN MULTIPLE ELEMENTS */
+/* GENERAL CSS */
 
 .width-80 {
   width: 80%;
@@ -76,7 +76,7 @@ select {
   text-align: center;
 }
 
-/* PRIMARY CSS FLOW */
+/* MAIN CSS FLOW */
 
 html {
   font-family: Poppins, Arial, Helvetica, Tahoma;
@@ -138,7 +138,7 @@ header {
 .header-nav .contact-us-link {
   background-color: #d80027;
   padding: 0.5em 1.5em;
-  border-radius: 8px;
+  border-radius: 0.5em;
 }
 
 .header-nav .contact-us-link:hover {
@@ -172,7 +172,6 @@ main {
 }
 
 .search-bar {
-  display: block;
   background-color: #e1d3ca;
   color: black;
   border-radius: 10px;
@@ -205,7 +204,7 @@ main {
 .news-img {
   object-fit: cover;
   object-position: center;
-  border-radius: 15px;
+  border-radius: 1rem;
 }
 
 .main-content-left .news-img {
@@ -332,14 +331,15 @@ main {
 .subscription-form {
   background-color: black;
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 0.5em;
 }
 
 .subscription-form input[type="email"] {
   min-width: 11ch;
+  max-width: 23ch;
   background-color: black;
   color: white;
-  padding: 5px 0.5em 5px 1em;
+  padding: 0.4em 0.5em 0.4em 1em;
   border: none;
   outline: none;
 }
@@ -349,7 +349,7 @@ main {
   color: black;
   padding: 0.5em 1em;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.4em;
   cursor: pointer;
 }
 
@@ -388,7 +388,7 @@ main {
   align-items: flex-end;
 }
 
-.soc-meds-nav .soc-med-icon {
+.soc-med-icon {
   width: 30px;
   border-radius: 50%;
 }
