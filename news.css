@@ -129,7 +129,7 @@ header {
 }
 
 .header-nav .current-page::after {
-  content: url("../Images - IT Discover Hub/current-page-icon.png");
+  content: url("images/current-page-icon.png");
   position: absolute;
   left: -16px;
   bottom: -16px;

@@ -1,4 +1,4 @@
-/* CSS EDFAULTS RESET */
+/* CSS DEFAULTS RESET */
 
 *,
 *::before,
@@ -164,7 +164,7 @@ header {
 }
 
 .header-nav .current-page::after {
-  content: url("../Images - IT Discover Hub/current-page-icon.png");
+  content: url("images/current-page-icon.png");
   position: absolute;
   left: -16px;
   bottom: -16px;
@@ -186,7 +186,7 @@ main > section:not(:last-child) {
 }
 
 .primary-section {
-  background-image: url("Images - Home Page/bg1.png");
+  background-image: url("images/bg2.png");
   padding: 4rem 40% 4rem 6rem;
 }
 
@@ -256,7 +256,7 @@ main > section:not(:last-child) {
 }
 
 .third-section > .relative-for-design::before {
-  content: url("Images - Home Page/design-icon.png");
+  content: url("images/design-icon-1.png");
   position: absolute;
   overflow: hidden;
   top: -4.5rem;
@@ -265,7 +265,7 @@ main > section:not(:last-child) {
 }
 
 .section-catalog-categories {
-  background-image: url("Images - Home Page/bg3.png");
+  background-image: url("images/bg4.png");
   padding: 5rem 10%;
   text-align: center;
 }
