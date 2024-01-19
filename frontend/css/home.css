@@ -107,6 +107,7 @@ select {
 html {
   font-family: Poppins, Arial, Helvetica, Tahoma;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -118,7 +119,7 @@ body {
 header {
   position: sticky;
   width: 100%;
-  height: 6rem;
+  height: 6.5rem;
   background-color: #070320;
   display: flex;
   justify-content: space-between;
@@ -128,14 +129,15 @@ header {
   z-index: 100;
 }
 
-.website-title {
-  font-weight: 800;
-  font-size: 1.5rem;
+.website-logo {
+  margin: 0.5rem 0;
+  width: 5rem;
+  border-radius: 50%;
 }
 
 .header-nav {
   width: 70%;
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
 .header-nav ul {
@@ -166,12 +168,43 @@ header {
 .header-nav .current-page::after {
   content: url("images/current-page-icon.png");
   position: absolute;
-  left: -16px;
-  bottom: -16px;
+  left: -1rem;
+  bottom: -1rem;
+}
+
+.header-nav .sign-in .fa-solid {
+  font-size: 1.5rem;
+}
+
+.sign-in {
+  position: relative; 
+}
+
+.hidden-text {
+  font-size: 0.8rem;
+  width: 4rem;
+  border-radius: 0.1rem;
+  color: #000;
+  background-color: #d9d9d9;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.3rem;
+}
+
+.sign-in .hidden-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-in:hover .hidden-text {
+  display: block; 
 }
 
 main {
-  max-width: 1600px;
+  max-width: 100rem;
   margin-bottom: 5rem;
 }
 
@@ -188,6 +221,12 @@ main > section:not(:last-child) {
 .primary-section {
   background-image: url("images/bg2.png");
   padding: 4rem 40% 4rem 6rem;
+}
+
+.primary-section p {
+  line-height: 2;
+  word-spacing: 0.094rem;
+  letter-spacing: 0.031rem;
 }
 
 .primary-section .more-details-link {
@@ -224,26 +263,41 @@ main > section:not(:last-child) {
 
 .popular-technologies-item img {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   object-fit: cover;
   object-position: center;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.star-rating {
-  width: fit-content;
-  font-family: Times;
-  font-size: 1.5rem;
-  line-height: 1;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, gold 50%, white 50%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.popular-technologies-bs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.popular-technologies-item .star-rating {
-  margin-left: auto;
+.wishlist-button {
+  display: inline-block;
+  padding: 0.5rem 1.8rem; 
+  border: none;
+  border-radius: 4rem; 
+  background: linear-gradient(90deg, #d80027, #ee7214);
+  color: #ffffff; 
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  
+}
+
+.wishlist-button:hover {
+  background: #ee7214; /* Reverse gradient */
+  transition: background 0.1s linear;
+}
+
+.wishlist-button:active {
+  background-color: #ee7214; 
+  transform: scale(0.95); 
+  box-shadow: 0 0 0.313rem rgba(0, 0, 0, 0.3); 
 }
 
 .third-section > .relative-for-design {
@@ -262,34 +316,6 @@ main > section:not(:last-child) {
   top: -4.5rem;
   right: 3.8rem;
   z-index: 1;
-}
-
-.section-catalog-categories {
-  background-image: url("images/bg4.png");
-  padding: 5rem 10%;
-  text-align: center;
-}
-
-.nav-catalog-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.catalog-category {
-  width: calc((100% / 12) * 4 - 1rem);
-}
-
-.category-icon {
-  width: 60px;
-  margin: 0 auto;
-}
-
-.arrow-icon {
-  width: 20px;
-  margin-top: 1rem;
 }
 
 .catalog-gallery {
@@ -313,10 +339,10 @@ main > section:not(:last-child) {
 
 .catalog-gallery img {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   object-fit: cover;
   object-position: center;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .section-catalog-gallery > .see-all-link {
@@ -324,8 +350,19 @@ main > section:not(:last-child) {
 }
 
 .subscribe-section {
-  max-width: 1600px;
+  max-width: 100rem;
   padding: 0 10% 5rem;
+  margin-top: 10rem;
+}
+
+.subscribe-section p {
+	line-height: 2;
+	margin-top: 0.5rem;
+}
+
+.subscribe-section h2, .subscribe-div-text .head {
+  font-size: 1.9rem;
+	font-weight: 500;
 }
 
 .subscribe-div {
@@ -335,7 +372,7 @@ main > section:not(:last-child) {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   margin-top: 2rem;
 }
 
@@ -345,7 +382,7 @@ main > section:not(:last-child) {
 
 .subscription-form {
   background-color: black;
-  padding: 5px;
+  padding: 0.313rem;
   border-radius: 0.5em;
 }
 
@@ -379,7 +416,7 @@ main > section:not(:last-child) {
 }
 
 .footer-navs-and-information {
-  max-width: 1600px;
+  max-width: 100rem;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
@@ -394,25 +431,41 @@ main > section:not(:last-child) {
 
 .about-us-div nav {
   margin-top: 1rem;
+  line-height: 2;
+}
+
+.contact-us-div .email {
+	display: flex;
+  align-items: center;
+}
+
+.contact-us-div .email i {
+	margin-top: 1rem;
+  margin-right: 0.5rem;
 }
 
 .soc-meds-nav {
   height: 100%;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: flex-end;
 }
 
-.soc-med-icon {
-  width: 30px;
+.soc-meds-nav .fa-brands{
+  width: 2.188rem;
+  height: 2.188rem;
   border-radius: 50%;
+  background-color: #000;
+	color: #fff;
+  padding: 0.781rem;
+  font-size: 0.75rem;
 }
 
 .line-separator {
-  border-bottom: 2px solid black;
+  border-bottom: 0.063rem solid black;
   margin: 2rem 0;
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
