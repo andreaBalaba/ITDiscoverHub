@@ -27,12 +27,31 @@
           <li><a href="catalog.html">Catalog</a></li>
           <li><a href="news.html">News</a></li>
           <li><a class="contact-us-link" href="contact-us.html">Contact us</a></li>
+      
+          <!--Sign In-->
           <li><div class="sign-in"><a href="signup.html">
             <i class="fa-solid fa-arrow-right-to-bracket"></i>
           <span class="hidden-text">Sign In</span>
           </a>
           </div>
           </li>
+
+          <!--User Icon, Sign Out--><!--
+          <li class="dropdown-wrapper">
+            <a class="user-icon" href=""><i class="fa-regular fa-user"></i></a>
+            <span class="drop-icon" tabindex="0" onclick="toggleDropdown(this)">
+              <i class="fa-solid fa-angle-down"></i>
+            </span>
+            <div class="dropdown-content">
+              <a class="sign-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a>
+            </div>
+          </li>
+          
+          <script>
+            function toggleDropdown(element) {
+              element.closest('.dropdown-wrapper').classList.toggle('active');
+            }
+          </script>-->
         </ul>
       </nav>
     </header>
