@@ -5,28 +5,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="about-us.css" />
+    <link rel="stylesheet" href="css/about-us.css" />
 
     <!--Need internet-->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
     <!--Navigation-->
     <header>
-      <nav>
-        <div class="logo">
-          <a href="#">IT Discover Hub</a>
-        </div>
+      
+      <img class="website-logo" src="css/images/IDH_logo.png" alt="Logo of ITDiscoverHub" />[]
 
+      <nav class="header-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="about-us.html" class="About">About us</a></li>
-          <li><a href="#">Catalog</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#" class="cu_btn">Contact us</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a class="current-page" href="about-us.html">About us</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a class="contact-us-link" href="contact-us.html">Contact us</a></li>
+          <!--Sign In-->
+          <li><div class="sign-in"><a href="signup.html">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span class="hidden-text">Sign In</span>
+          </a>
+          </div>
+          </li>
+
+          <!--User Icon, Sign Out--><!--
+          <li class="dropdown-wrapper">
+            <a class="user-icon" href=""><i class="fa-regular fa-user"></i></a>
+            <span class="drop-icon" tabindex="0" onclick="toggleDropdown(this)">
+              <i class="fa-solid fa-angle-down"></i>
+            </span>
+            <div class="dropdown-content">
+              <a class="sign-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a>
+            </div>
+          </li>
+          
+          <script>
+            function toggleDropdown(element) {
+              element.closest('.dropdown-wrapper').classList.toggle('active');
+            }
+          </script>-->
         </ul>
       </nav>
     </header>
@@ -37,8 +63,8 @@
         <div class="main_left">
           <div class="breadcrumb">
             <ul>
-              <li><a href="#">Home</a></li>
-              <i class="bx bx-chevron-right"></i>
+              <li><a href="#">Home</a></li> 
+              <i class="fa-solid fa-chevron-right"></i>
               <li><a href="about-us.html" class="about">About Us</a></li>
             </ul>
           </div>
@@ -60,12 +86,12 @@
           </div>
           <div class="main_btn">
             <a href="#why">Get in touch</a>
-            <i class="bx bx-right-arrow-alt"></i>
+            <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
         <div class="main_right">
           <div class="main_pic">
-            <img src="images/bg5.png" alt="Background Photo" />
+            <img src="css/images/bg5.png" alt="Background Photo" />
           </div>
         </div>
       </div>
@@ -120,7 +146,7 @@
     <div class="background">
       <div class="bg">
         <div class="bgpic">
-          <img src="images/bg6.jpg" alt="Background Photo" />
+          <img src="css/images/bg6.jpg" alt="Background Photo" />
         </div>
         <div class="bgcont">
           <h1>Background: Unveiling the Essence of<br />IT Discover Hub</h1>
@@ -138,47 +164,47 @@
     </div>
 
     <!--Our Team-->
-    <div class="TeamSub">
+    <div class="OurTeam">
       <h2 class="othead">Our Team</h2>
       <div class="Main_Teams">
         <div class="Teams">
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_1.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">Stephen Perez</h3>
+              <h3 class="name">Stephen</h3>
               <p>Project Manager</p>
             </div>
           </div>
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_2.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">Danica Malana</h3>
+              <h3 class="name">Danica</h3>
               <p>Documents</p>
             </div>
           </div>
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_2.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">Kristine Lacampuenga</h3>
+              <h3 class="name">Kristine</h3>
               <p>UI Designer</p>
             </div>
           </div>
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_2.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">Einha Muday</h3>
+              <h3 class="name">Einha</h3>
               <p>Web Developer</p>
             </div>
           </div>
@@ -186,108 +212,106 @@
         <div class="Teams">
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_2.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">Andrea Balaba</h3>
+              <h3 class="name">Andrea</h3>
               <p>Web Developer</p>
             </div>
           </div>
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_1.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">J.H Torres</h3>
+              <h3 class="name">John Henry</h3>
               <p>Web Developer</p>
             </div>
           </div>
           <div class="team">
             <div class="team_profile">
-              <img src="images/profile-icon.jpg" />
+              <img src="css/images/person_1.png" />
             </div>
 
             <div class="team_text">
-              <h3 class="name">Kyle Castronuevo</h3>
+              <h3 class="name">Kyle</h3>
               <p>Web Developer</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="Subs">
-        <div class="Subcont">
-          <h2>Subscribe today and plug into the future!</h2>
-          <p>
+    </div>
+    
+    <div class="subscribe-section">
+          <h2 class="width-60">Subscribe today and plug into the future!</h2>
+          <p class="width-60">
             We promise not to flood your inbox - our updates are as sleek as<br />
             our gadgets. Join the TDA community and stay ahead in the world<br />
             of technology. Because when it comes to staying informed, IDH has<br />your
             back.
           </p>
-        </div>
-        <div class="StayL">
-          <div class="staycont">
-            <h2>Stay in the loop</h2>
-            <p>
-              Subscribe to receive the latest news and updates about IDH.<br />
-              We promise not to spam you!
-            </p>
-          </div>
-          <div class="emailbar">
-            <form name="email" method="POST">
+          <div class="subscribe-div">
+            <div class="subscribe-div-text">
+              <p><span class="head">Stay in the loop</span></p>
+              <p>
+                Subscribe to receive latest news and updates about ITDH.
+                <span class="block">We promise not to spam you.</span>
+              </p>
+            </div>
+            <form class="subscription-form" action="#" method="post">
               <input
-                type="text"
-                name="userEmail"
-                maxlength="100"
-                placeholder="Enter email address"
+                type="email"
+                name="email"
+                placeholder="Enter email address "
+                required
               />
-              <button type="submit" name="emailSub">Continue</button>
+              <button class="submit-button" type="submit">Continue</button>
             </form>
           </div>
-        </div>
-      </div>
     </div>
-
+  
     <!--Footer-->
     <footer>
-      <div class="footer_main">
-        <div class="footer_tag">
-          <h2>IT Discover Hub</h2>
-          <p>
-            "Unlock Exclusive Content - Dive into Our<br />Website!"<br /><br />
-          </p>
+      <div class="footer-navs-and-information">
+        <div class="ITD">
+          <img class="website-logo" src="css/images/IDH_logo.png" alt="Logo of ITDiscoverHub" />
+          <p>"Unlock Exclusive Content - Dive Into Our Website!"</p>
           <p>@ITDiscoverHub</p>
         </div>
-
-        <div class="footer_tag2">
-          <h3>About Us</h3>
-          <p>Home</p>
-          <p>Catalog</p>
-          <p>Careers</p>
-          <p>Contact Us</p>
+        <div class="about-us-div">
+          <p><strong>About us</strong></p>
+          <nav>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Catalog</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Contact us</a></li>
+            </ul>
+          </nav>
         </div>
-
-        <div class="footer_tag">
-          <h3>Contact Us</h3>
-          <p>
-            Have Questions? Contact Us for<br />
-            Friendly Assistance.<br /><br />
-          </p>
-          <p>+908 89097 890</p>
-        </div>
-
-        <div class="footer_tag">
-          <div class="icon">
-            <i class="bx bxl-facebook"></i>
-            <i class="bx bxl-instagram"></i>
-            <i class="bx bxl-twitter"></i>
-            <i class="bx bxl-linkedin"></i>
+        <div class="contact-us-div">
+          <p><strong>Contact us</strong></p>
+          <p>Have questions? Contact us for friendly assistance.</p>
+          <div class="email">
+            <i class="fa-regular fa-envelope"></i>
+            <p>itdiscoverhub@gmail.com</p>
           </div>
         </div>
+        <div>
+          <nav class="soc-meds-nav">
+            <a href="https://www.facebook.com/profile.php?id=61555182040614"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/itdiscoverh/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/itdiscover_hub"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/it-discover-hub-7453472a9/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </nav>
+        </div>
       </div>
-      <hr />
-      <p class="end">Copyright ® 2023 IT Discover Hub All Rights Reserved</p>
+      <div class="line-separator"></div>
+      <p class="copyright text-align-center">
+        Copyright® 2023. IT Discover Hub. All Rights Reserved.
+      </p>
     </footer>
   </body>
 </html>

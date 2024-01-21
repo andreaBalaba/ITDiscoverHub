@@ -1,0 +1,165 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(7, 3, 32, 1);
+    max-width: 100%;
+    color: white;
+}
+.head{
+    text-align: left;
+    margin-left: 15px;
+    color: white;
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 100px;
+    margin-top: 120px;
+}
+.about-section {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.check-img{
+    width: 25px;
+    padding: 25px;
+    border-radius: 100%;
+}
+.about-section img{
+    width: 30px;
+    background-color: rgb(59, 54, 55);
+    padding: 8px;
+    border-radius: 100%;
+}
+.about-section label {
+    font-size: 33px;
+    color: #f3f3f3;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+p{
+    color: white;
+}
+.container{
+    max-width: 100%;
+}
+.headline{
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+    text-align-last: center;
+    color: white;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 30px 30px;
+    
+}
+.ipad{
+    width: 787px;
+    height: 650px;
+    top: 691px;
+    left: 55px;
+}
+.macbook{
+    width: 787px;
+    height: 489px;
+    top: 1263px;
+    left: 783px;
+    margin-bottom: 3%;
+}
+.flip{
+    width: 787px;
+    height: 490px;
+    top: 1941px;
+    left: 118px;
+
+}
+.monitor{
+    width: 787px;
+    height: 490px;
+    top: 1941px;
+    left: 118px;
+
+}
+.col-2 h1{
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 5%;
+    margin-top: 5%;
+    max-width: 100%;
+}
+.col-2 p{
+    font-size: 20px;
+    margin: 3%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5%;
+} 
+.check img{
+    float: inline-start;
+    width: 30px;
+    padding: 8px;
+    border-radius: 100%;
+    margin-left: 5%
+}
+.read{
+    width:100px;
+    height: 35px;
+    font-stretch: normal;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    padding-top: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.read button{
+    background-color: red;
+    color: white;
+    width:100px;
+    height: 35px;
+    font-stretch: normal;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10%;
+}

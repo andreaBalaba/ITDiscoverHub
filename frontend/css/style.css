@@ -4,7 +4,7 @@ html, body{
   margin: 0;
 }
 body{
-      background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url('picture.jpg');
+      background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)),url('images/Signup images/picture.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -33,12 +33,9 @@ body{
     .box1 {
       width: 50%;
       height: 476px;
-      background: url('picture.jpg') center/cover; 
+      background: url('images/Signup images/picture.jpg') center/cover; 
       font-family: Poppins, sans-serif;
       color: white;
-
-
-      
 
     }
 
