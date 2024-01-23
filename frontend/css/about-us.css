@@ -208,13 +208,15 @@ section .Main {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	display: grid;
-	grid-template-columns: 1fr 1.1fr;
+	display: flex; 
+  	flex-direction: row;
+	justify-content: space-between;
 }
 
 section .Main .main_left {
-   margin: 0;
-   padding-left: 6.875rem;
+	width: calc(50% - 1.875rem);
+	margin: 0;
+	padding-left: 6.875rem;
 }
 
 section .Main .main_left .breadcrumb {
@@ -314,7 +316,7 @@ section .Main .main_right .main_pic img{
 
 .why .heading{
 	position: relative;
-	margin: 8.125rem 6.875rem 4.688rem 6.875rem;
+	margin: 8.125rem 6.875rem 3.5rem 6.875rem;
 	font-weight: 600;
 	font-size: 1.625rem;
 	top: 0.625rem;
@@ -322,20 +324,23 @@ section .Main .main_right .main_pic img{
 }
 
 .why .content{
-	width: 88%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: 0.625rem;
-	margin: 0 6.875rem;
+	width: 100%;
+    margin: 2rem auto;
+    display: flex;
+	flex-direction: row;
+	top: 3rem;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .why .content .con1, .con2, .con3 {
 	background-color: #fff;
 	border-radius: 1.25rem;
-	width: 24.375rem;
-	height: 22.5rem;
-	padding: 2.5rem;
+	padding: 2.2rem;
 	font-size: 0.875rem;
+	margin: 1rem; 
+	width: calc(27.5% - 2rem); 
+	min-width: 20rem;
 }
 
 .why .content .con1 h6, .con2 h6, .con3 h6 {
@@ -361,7 +366,8 @@ section .Main .main_right .main_pic img{
 	width: 11.875rem;
 }
 
-.why .content .con1 p, .con2 p, .con3 p {
+.why .content .con-text {
+	width: 100%;
 	text-align: left;
 	line-height: 2;
 	margin-top: 2.188rem;
@@ -371,40 +377,42 @@ section .Main .main_right .main_pic img{
 
 /*Background of IT Discover Hub*/
 .background {
-	width: 100%;
-	height: auto;
-	background-color: #fff;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
 }
 
 .background .bg {
-	width: 90%;
-	margin: 0 6.875rem;
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	padding-top: 9.375rem;
+  width: 100%; 
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: row; 
+  padding-top: 9.375rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.background .bg .bgpic img{
-	width: 34.375rem;
-	height: 100%;
-	padding-top: 1.875rem;
+.background .bg .bgpic img {
+  width: 34.375rem;
+  height: 100%;
+  padding-top: 1.875rem;
 }
 
 .background .bg .bgcont {
-	padding: 6.875rem 0 0 6.875rem;
+  padding: 6.875rem 0 0 3rem;
 }
 
-.background .bg .bgcont h1{
-	font-weight: 600;
-	font-size: 1.875rem;
+.background .bg .bgcont h1 {
+  font-weight: 600;
+  font-size: 1.875rem;
 }
 
-.background .bg .bgcont p{
-	font-weight: 500;
-	font-size: 1.063rem;
-	line-height: 2;
-	width: 40.625rem;
-	margin-top: 3.75rem;
+.background .bg .bgcont p {
+  font-weight: 500;
+  font-size: 1.063rem;
+  line-height: 2;
+  width: 100%; 
+  margin-top: 3.75rem;
 }
 
 /*Teamsub*/
