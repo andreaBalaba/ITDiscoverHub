@@ -2,21 +2,21 @@
     {
        "newsTitle" : "Apple Says It Will Remove a Health Feature From New Apple Watches",
        "newsURL" : "https://www.statnews.com/2024/01/18/apple-watch-masimo-patent-dispute-blood-oxygen-feature/",
-       "newsImage" : "gallery1.png"
+       "newsImage" : "../frontend/css/images/gallery1.png"
     },
     {
        "newsTitle" : "Samsung packs newest Galaxy S24 smartphones with AI functions to beat Apple",
        "newsURL" : "https://money.usnews.com/investing/news/articles/2024-01-17/samsung-packs-newest-galaxy-s24-smartphones-with-ai-functions-to-beat-apple",
-       "newsImage" : "gallery2.png"
+       "newsImage" : "../frontend/css/images/gallery2.png"
     },
     {
        "newsTitle" : "Australian watchdog says Elon Musk's X Corp slashed 30% of trust and safety staff",
        "newsURL" : "https://www.wionews.com/technology/australian-watchdog-says-elon-musks-x-corp-slashed-30-of-trust-and-safety-staff-678782",
-       "newsImage" : "gallery3.png"
+       "newsImage" : "../frontend/css/images/gallery3.png"
     },
     {
        "newsTitle" : "PH gives highest perks for new tech",
        "newsURL" : "https://www.pna.gov.ph/articles/1169044",
-       "newsImage" : "gallery4.png"
+       "newsImage" : "../frontend/css/images/gallery4.png"
     }
 ]
