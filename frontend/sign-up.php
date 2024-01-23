@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="sign-up.css" />
+    <link rel="stylesheet" href="css/sign-up.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -22,7 +22,7 @@
         <a href="#" target="_blank">Sign In</a>
       </div>
       <div class="right-container">
-        <form action="#" class="signIn-form">
+        <form method="POST" class="signIn-form">
           <div class="name-inputs">
             <div class="input-group">
               <label for="Fname-label">FIRST NAME</label>
@@ -67,7 +67,7 @@
           </div>
 
           <div class="button">
-            <button class="signIn" type="button">Sign Up</button>
+            <button class="signIn" type="submit">Sign Up</button>
           </div>
         </form>
       </div>
@@ -83,5 +83,28 @@
         }
       }
     </script>
+    
+    <?php
+      include 'backend/models.php';
+      include 'backend/rules.php';
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $firstName = $_POST["Fname"];
+        $lastName = $_POST["Lname"];
+        $email = $_POST["emailAddress"];
+        $password = (string) $_POST["password"];
+    
+        if (isEmailExists($email)) {
+          echo '<script> alert("Username already exists.") </script>';
+        }
+        else {
+          $result = registerUser($firstName, $lastName, $email, $password);
+          if ($result) {
+            header("Location: home.html");
+          }
+          exit; 
+        }
+      }
+    ?>
   </body>
 </html>
