@@ -118,17 +118,20 @@
           </p>
         </div>
 
-        <div class="text-box">
-          <label class="first">First Name</label>
-          <input type="text" name="" style="margin-left: 0" />
-          <label class="last">Last Name</label>
-          <input type="text" name="" style="margin-right: 0" />
-          <label class="em">Email Address</label>
-          <input type="text" name="" class="email" />
-          <label class="mess">Message</label>
-          <textarea></textarea>
-          <button>Get in Touch</button>
-        </div>
+        <!-- contact us form -->
+        <form action="contactus.php" method="POST">
+          <div class="text-box">
+            <label class="first">First Name</label>
+            <input type="text" name="fname" style="margin-left: 0" />
+            <label class="last">Last Name</label>
+            <input type="text" name="lname" style="margin-right: 0" />
+            <label class="em">Email Address</label>
+            <input type="text" name="email" class="email" />
+            <label class="mess">Message</label>
+            <textarea name="message"></textarea>
+            <button type="submit">Get in Touch</button>
+          </div>
+        </form>
       </div>
     </div>
     <footer id="footer">
@@ -148,7 +151,7 @@
               <span class="block">We promise not to spam you.</span>
             </p>
           </div>
-          <form class="subscription-form" action="#" method="post">
+          <form class="subscription-form" action="subscribe.php" method="POST">
             <input
               type="email"
               name="email"

@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $emailMessage = "Hello Subscribers!<br>Thank you for subscribing to our latest news and updates.Here are the latest news:\n";
 
     foreach ($newsData->articles as $article) {
-        $emailMessage .= "<br><br><b>Title:</b> {$article->title}<br><br><b>Description:</b> {$article->description}\<br><br><b>URL:</b> {$article->url}\n\n\n";
+        $emailMessage .= "<br><br><b>Title:</b> {$article->title}<br><br><b>Description:</b> {$article->description}\<br><br><b>URL:</b> {$article->url}\n\n<hr>";
     }
 
     // Create a PHPMailer instance
