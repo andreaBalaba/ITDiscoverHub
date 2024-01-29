@@ -47,8 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
 
         echo "Thank you for subscribing! You will receive an email with the latest news shortly.";
+        header("location:news.html");
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        header("location:news.html");
     }
 } else {
     echo "Invalid Request";
