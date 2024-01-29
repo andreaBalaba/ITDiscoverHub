@@ -34,8 +34,8 @@ The IT Discover Hub Team";
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'perezstephenmathew360@gmail.com'; // ill just use my personal email first
-        $mail->Password   = 'fdhh zbtl bxuo ygom';   // created via google app password
+        $mail->Username   = 'itdiscoverhub@gmail.com';
+        $mail->Password   = 'gajb qcyi hgtn scau';   // created via google app password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 

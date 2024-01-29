@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'perezstephenmathew360@gmail.com'; // ill just use my personal email first
-        $mail->Password   = 'fdhh zbtl bxuo ygom';   // created via google app password
+        $mail->Username   = 'itdiscoverhub@gmail.com';
+        $mail->Password   = 'gajb qcyi hgtn scau';   // created via google app password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
@@ -46,7 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Send email
         $mail->send();
 
-        echo "Thank you for subscribing! You will receive an email with the latest news shortly.";
+        // echo "Thank you for subscribing! You will receive an email with the latest news shortly.";
+        echo "<script>alert('Thank you for subscribing! You will receive an email with the latest news shortly.');</script>";
         header("location:news.html");
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
