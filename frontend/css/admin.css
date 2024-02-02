@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+
+html,
+body {
+    margin: 0;
+    font-family: 'Inika', serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('images/Signup images/picture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+
+
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /*      margin-top: 100px;*/
+
+
+
+}
+
+.box1 {
+    width: 50%;
+    height: 476px;
+    background: url('images/Signup images/picture.jpg') center/cover;
+    font-family: Poppins, sans-serif;
+    color: white;
+
+}
+
+.box2 {
+    width: 50%;
+    height: 476px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+
+
+}
+
+/* box1 */
+.details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.box1 h2 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: xx-large;
+}
+
+.box1 p {
+    margin-bottom: 60px;
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: large;
+    text-align: center;
+    width: 80%;
+
+}
+
+/* box 2 */
+.input-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.input-group img{
+    width: 70%;
+    height: 15vh;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.input-group input{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    padding: 0.8rem 4rem;
+    border-radius: 20px;
+    margin: 0.5rem 0 0.5rem -4rem;
+}
+
+.input-group input::placeholder {
+    color: rgba(48, 37, 37, 0.44);
+}
+
+.input-group button {
+    padding: 0.5rem 4rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 1rem;
+    background-color: rgba(43, 232, 232, 1);
+}
+
+span.error-mgs {
+    color: red;
+}
+
+
+
