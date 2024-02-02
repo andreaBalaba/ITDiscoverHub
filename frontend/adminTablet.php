@@ -169,8 +169,8 @@ $conn->close();
                         <!-- OS -->
                         <label for="os">OS:</label>
                         <select name="os" id="os">
-                            <option value="windows">Android</option>
-                            <option value="">IOS</option>
+                            <option value="android">Android</option>
+                            <option value="ios">IOS</option>
                         </select>
                         <!-- Release Date -->
                         <label for="releaseDate">Release Date (YYYY-MM-DD):</label>

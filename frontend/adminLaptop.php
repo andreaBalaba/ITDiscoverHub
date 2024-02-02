@@ -146,7 +146,7 @@ $conn->close();
                         <label for="os">OS:</label>
                         <select name="os" id="os">
                             <option value="windows">Windows</option>
-                            <option value="">macOS</option>
+                            <option value="macOS">macOS</option>
                         </select>
                         <label for="processor">Processor:</label>
                         <input type="text" name="processor" required><br>

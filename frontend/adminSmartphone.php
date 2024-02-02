@@ -160,7 +160,7 @@ $conn->close();
                         <label for="os">OS:</label>
                         <select name="os" id="os">
                             <option value="windows">Android</option>
-                            <option value="">IOS</option>
+                            <option value="ios">IOS</option>
                         </select>
                         <!-- Chipset -->
                         <label for="chipset">Chipset:</label>
