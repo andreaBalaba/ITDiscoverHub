@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows == 1) {
-        echo "signed in";
-        header('Location: adminHome.html');
+        $_SESSION['admin_username'] = $username;
+        header('Location: adminHome.php');
         exit();
     } else {
         $error[] = 'incorrect username or password';
