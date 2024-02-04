@@ -1,0 +1,336 @@
+/* CSS DEFAULTS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+header,
+main,
+footer {
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:not(:first-child) {
+  margin-top: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* GENERIC CSS */
+
+.width-80 {
+  width: 80%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.relative-for-design {
+  position: relative;
+}
+
+.block {
+  display: block;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.with-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.font-size-large {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.font-size-medium {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.flex-space-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MAIN CSS FLOW */
+
+html {
+  font-family: Poppins, Arial, Helvetica, Tahoma;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(150deg, #070320 60%, #170c57);
+  line-height: 1.5;
+  padding: 0;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  width: 100%;
+  height: 6rem;
+  background-color: #070320;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  padding: 2rem;
+  z-index: 100;
+  box-shadow: 0 8px 6px -6px #0f0253;
+}
+
+.website-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.header-nav {
+  width: 70%;
+  max-width: 600px;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav a:hover {
+  color: #ee7214;
+}
+
+.header-nav .contact-us-link {
+  background-color: #d80027;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+}
+
+.header-nav .contact-us-link:hover {
+  color: #070320;
+}
+
+.current-page {
+  position: relative;
+  color: #ee7214;
+}
+
+.header-nav .current-page::after {
+  content: url("images/current-page-icon.png");
+  position: absolute;
+  left: -16px;
+  bottom: -16px;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1600px;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.product-img {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 0 3px;
+  margin-bottom: 3rem;
+}
+
+table {
+  border: 2px solid white;
+  width: 80%;
+  border-collapse: separate;
+  border-spacing: 0.5rem;
+}
+
+th {
+  width: 15%;
+  padding: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 1rem;
+}
+
+.wishlist-btn {
+  display: block;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  inset: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 2px;
+  margin: auto auto 0;
+  padding: 0.8rem 2rem;
+  margin-top: 3rem;
+}
+
+/* FOOTER */
+footer > section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe-section {
+  max-width: 1600px;
+  padding: 0 10% 5rem;
+}
+
+.subscribe-div {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.subscribe-div-text {
+  max-width: 50%;
+}
+
+.subscription-form {
+  background-color: black;
+  padding: 5px;
+  border-radius: 0.5em;
+}
+
+.subscription-form input[type="email"] {
+  min-width: 11ch;
+  max-width: 23ch;
+  background-color: black;
+  color: white;
+  padding: 0.4em 0.5em 0.4em 1em;
+  border: none;
+  outline: none;
+}
+
+.subscription-form .submit-button {
+  background-color: #d80027;
+  color: black;
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+  border: none;
+  cursor: pointer;
+}
+
+.subscription-form > .submit-button:hover {
+  color: white;
+}
+
+.footer-section {
+  background-color: white;
+  color: black;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-navs-and-information {
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.about-us-div,
+.soc-meds-nav {
+  min-width: max-content;
+}
+
+.about-us-div nav {
+  margin-top: 1rem;
+}
+
+.soc-meds-nav {
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.soc-med-icon {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.line-separator {
+  border-bottom: 2px solid black;
+  margin: 2rem 0;
+}
+
+.copyright {
+  font-size: 12px;
+}
