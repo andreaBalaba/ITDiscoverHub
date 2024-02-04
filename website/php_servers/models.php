@@ -49,8 +49,9 @@
         public $ram;
         public $storage;
         public $price;
+        public $releaseDate;
 
-        public function __construct($brand, $model, $os, $processor, $ram, $storage, $price) {
+        public function __construct($brand, $model, $os, $processor, $ram, $storage, $price, $releaseDate) {
             $this->brand = $brand;
             $this->model = $model;
             $this->os = $os;
@@ -58,6 +59,7 @@
             $this->ram = $ram;
             $this->storage = $storage;
             $this->price = $price;
+            $this->releaseDate = $releaseDate;
         } 
     }
     class Tablet {

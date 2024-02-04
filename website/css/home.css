@@ -349,11 +349,11 @@ main > section:not(:last-child) {
   text-align: center;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background 0.3s ease;
 }
 
 .wishlist-button:hover {
   background: #ee7214; /* Reverse gradient */
-  transition: background 0.1s linear;
 }
 
 .wishlist-button:active {

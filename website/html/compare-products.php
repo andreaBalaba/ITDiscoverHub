@@ -140,11 +140,6 @@
           <td id="price-col-1"></td>
           <td id="price-col-2"></td>
         </tr>
-        <tr>
-          <th></th>
-          <td><button class="wishlist-btn col-1">Add to wishlist</button></td>
-          <td><button class="wishlist-btn col-2">Add to wishlist</button></td>
-        </tr>
       </table>
     </main>
     <footer>
@@ -233,6 +228,6 @@
         </p>
       </section>
     </footer>
-    <script src="compare-products.js"></script>
+    <script src="../javascript/compare-products.js"></script>
   </body>
 </html>

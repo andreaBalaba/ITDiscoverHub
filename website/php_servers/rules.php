@@ -182,4 +182,8 @@
 
         return $result;
     }
+
+    function compareCatalogItemsByDate($catalogItem1, $catalogItem2) {
+        return $catalogItem2->releaseDate <=> $catalogItem1->releaseDate;
+    }
 ?>

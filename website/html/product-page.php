@@ -1,6 +1,8 @@
 <?php 
     include_once '../php_servers/rules.php';
 
+    session_start();
+
     $category = $_GET['category'];
     $model = $_GET['model'];
 
@@ -26,7 +28,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | IT Discover Hub</title>
+    <title><?php if (isset($product)) echo $product->model ?> | IT Discover Hub</title>
     <link rel="stylesheet" href="../css/product-page.css" />
     <link rel="stylesheet"
     href=https://fonts.googleapis.com/css?family=Poppins:300,400,700 />
@@ -105,8 +107,14 @@
             </tr>
           </table>
         </div>
+        <!-- if user is logged in and this catalog item is in his/her wishlist, the button is "Remove wishlist" -->
+        <?php if (isset($_SESSION['isLoggedIn']) && isInUserWishlists($_SESSION['email'], $category, $product->model) === true) { ?>
+          <button class="remove-wishlist-btn" data-model="<?php echo $product->model; ?>">Remove wishlist</button>
+          <!-- else if user is NOT logged in or this catalog item is NOT in his/her wishlist, the button is "Add to wishlist" -->
+        <?php } else { ?>
+          <button class="wishlist-btn" data-model="<?php echo $product->model; ?>">Add to wishlist</button>
+        <?php } ?>
       <?php } ?>
-      <button class="wishlist-btn">Add to wishlist</button>
     </main>
     <footer>
       <section class="subscribe-section">
@@ -194,5 +202,13 @@
         </p>
       </section>
     </footer>
+    <script>
+      // variables that other js linked needs, such as wishlist.js
+      const isLoggedIn = <?php echo isset($_SESSION['isLoggedIn']) ? 'true' : 'false' ;?>;
+      const email = <?php echo isset($_SESSION['email']) ? "'" . $_SESSION['email'] . "'" : 'null' ;?>;
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get("category");
+    </script>
+    <script src="../javascript/wishlist.js"></script>
 </body>
 </html>

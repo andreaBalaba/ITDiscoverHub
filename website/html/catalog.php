@@ -61,6 +61,11 @@
         }
       }
     }
+
+    usort($catalogItems, 'compareCatalogItemsByDate');
+  
+    // for ($i = 0; $i <= count($catalogItems); $i++) {
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +73,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | IT Discover Hub</title>
+    <title>Catalog | IT Discover Hub</title>
     <link rel="stylesheet" href="../css/catalog.css" />
     <link rel="stylesheet"
     href=https://fonts.googleapis.com/css?family=Poppins:300,400,700 />
@@ -293,7 +298,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const category = urlParams.get("category");
     </script>
-    <script src="../javascript/wishlist.js"></script>
     <script src="../javascript/catalog.js"></script>
+    <script src="../javascript/wishlist.js"></script>
   </body>
 </html>

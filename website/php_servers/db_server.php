@@ -78,7 +78,7 @@
     function getLaptops() {
         global $conn;
 
-        $sql = "SELECT `brand`, `model`, `os`, `processor`, `RAM`, `storage`, `price` FROM tbllaptop";
+        $sql = "SELECT `brand`, `model`, `os`, `processor`, `RAM`, `storage`, `price`, `releaseDate` FROM tbllaptop";
         $result = $conn->query($sql);
 
         $laptops = [];  // will be array of Laptop objects
@@ -86,7 +86,7 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 // creates Laptop object from the result, then adds to the $laptops array that will be returned
-                $laptop = new Laptop($row['brand'], $row['model'], $row['os'], $row['processor'], $row['RAM'], $row['storage'], $row['price']);
+                $laptop = new Laptop($row['brand'], $row['model'], $row['os'], $row['processor'], $row['RAM'], $row['storage'], $row['price'], $row['releaseDate']);
                 $laptops[] = $laptop;
             }
         } 

@@ -132,9 +132,9 @@ function getProduct(
       if (category === "smartphones") {
         document.getElementById("chipset-col-" + column).innerText =
           data["chipset"];
-        document.getElementById("GPU-col-" + column).innerText = data["GPU"];
+        document.getElementById("GPU-col-" + column).innerText = data["gpu"];
       }
-      document.getElementById("RAM-col-" + column).innerText = data["RAM"];
+      document.getElementById("RAM-col-" + column).innerText = data["ram"];
       document.getElementById("storage-col-" + column).innerText =
         data["storage"];
       if (category === "tablets") {
