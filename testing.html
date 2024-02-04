@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample API Fetch</title>
+</head>
+
+<body>
+
+    <h1>News</h1>
+    <div id="newsContainer"></div>
+
+    <script>
+        //fetching the news api
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=2cc204642c1c4b42b1171b82e8e25286", requestOptions)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.articles) { // Check if there is an 'articles' property in the response
+                    data.articles.forEach(news => {
+                        // will show all the data 
+                        if(news.author !== null && news.author !== undefined || news.content !== null && news.content !== undefined){
+                            const newsImg = `<img src = "${news.urlToImage}" width="200px" height="150px">`;
+                            const author = `<p> Author: ${news.author}</p>`;
+                            const title = `<p> Title: ${news.title}</p>`;
+                            const description = `<p> Description: ${news.description}</p>`;
+                            const content = `<p> Content: ${news.content}</p>`;
+                            const url = `<p> URL: ${news.url}</p>`;
+                            const breakLine = `<hr></hr>`
+    
+    
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', newsImg);
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', author);
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', title);
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', description);
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', content);
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', url);
+                            document.getElementById('newsContainer').insertAdjacentHTML('beforeend', breakLine);
+                        }
+                    });
+                } else {
+                    console.log('No articles found in the response');
+                }
+            })
+            .catch(error => {
+                console.log('error', error);
+            });
+    </script>
+</body>
+
+</html>
