@@ -25,9 +25,9 @@
 
       <nav class="header-nav">
         <ul>
-          <li><a class="current-page" href="">Home</a></li>
+          <li><a class="current-page" href="home.php">Home</a></li>
           <li><a href="about-us.html">About us</a></li>
-          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="catalog-main.html">Catalog</a></li>
           <li><a href="news.html">News</a></li>
           <li>
             <a class="contact-us-link" href="contact-us.html">Contact us</a>
