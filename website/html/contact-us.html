@@ -45,7 +45,7 @@
 
           <!--User Icon, Sign Out--><!--
           <li class="dropdown-wrapper">
-            <a class="user-icon" href=""><i class="fa-regular fa-user"></i></a>
+            <a class="user-icon" href="profile.php"><img src="<?php echo htmlspecialchars($currentUser->getProfilePicture()); ?>" alt="Profile Picture"></a>
             <span class="drop-icon" tabindex="0" onclick="toggleDropdown(this)">
               <i class="fa-solid fa-angle-down"></i>
             </span>

@@ -107,6 +107,7 @@ select {
 html {
   font-family: Poppins, Arial, Helvetica, Tahoma;
   color: white;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -115,12 +116,10 @@ body {
   padding: 0;
 }
 
-/* HEADER */
-
 header {
   position: sticky;
   width: 100%;
-  height: 6rem;
+  height: 6.5rem;
   background-color: #070320;
   display: flex;
   justify-content: space-between;
@@ -128,17 +127,17 @@ header {
   top: 0;
   padding: 2rem;
   z-index: 100;
-  box-shadow: 0 8px 6px -6px #0f0253;
 }
 
-.website-title {
-  font-weight: 800;
-  font-size: 1.5rem;
+.website-logo {
+  margin: 0.5rem 0;
+  width: 5rem;
+  border-radius: 50%;
 }
 
 .header-nav {
   width: 70%;
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 
 .header-nav ul {
@@ -169,9 +168,98 @@ header {
 .header-nav .current-page::after {
   content: url("../images/current-page-icon.png");
   position: absolute;
-  left: -16px;
-  bottom: -16px;
+  left: -1rem;
+  bottom: -1rem;
 }
+
+/*Sign In*/
+
+.header-nav .sign-in .fa-solid {
+  font-size: 1.5rem;
+}
+
+.sign-in {
+  position: relative;
+}
+
+.hidden-text {
+  font-size: 0.8rem;
+  width: 4rem;
+  border-radius: 0.1rem;
+  color: #000;
+  background-color: #d9d9d9;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.3rem;
+}
+
+.sign-in .hidden-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-in:hover .hidden-text {
+  display: block;
+}
+
+/*Profile Icon, Sign Out*/ /*
+.user-icon img {
+  max-width: 3.5rem;
+  max-height: 3.5rem;
+  padding: 0.53rem;
+  border-radius: 2rem;
+  transition: opacity 0.3s ease-out;
+}
+
+.user-icon img:hover {
+  opacity: 0.8;
+}
+
+.drop-icon .fa-angle-down {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  top: 80%; 
+  left: 90%; 
+  background-color: #d9d9d9; 
+  border: 1px solid #ccc; 
+  padding: 0.8rem; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 10000;
+  color: #000;
+  border-radius: 0.5rem;
+}
+
+.dropdown-wrapper.active .dropdown-content {
+  display: block;
+}
+
+.drop-icon {
+  pointer-events: all; 
+  cursor: pointer; 
+}
+
+.dropdown-wrapper.active .fa-angle-down {
+  transform: rotate(180deg); 
+}
+
+.sign-out .fa-arrow-right-from-bracket {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  background-color: rgba(58, 55, 55, 0.273);
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}*/
 
 /* MAIN */
 
@@ -221,8 +309,20 @@ footer > section {
 }
 
 .subscribe-section {
-  max-width: 1600px;
+  max-width: 100rem;
   padding: 0 10% 5rem;
+  margin-top: 10rem;
+}
+
+.subscribe-section p {
+  line-height: 2;
+  margin-top: 0.5rem;
+}
+
+.subscribe-section h2,
+.subscribe-div-text .head {
+  font-size: 1.9rem;
+  font-weight: 500;
 }
 
 .subscribe-div {
@@ -232,7 +332,7 @@ footer > section {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   margin-top: 2rem;
 }
 
@@ -242,7 +342,7 @@ footer > section {
 
 .subscription-form {
   background-color: black;
-  padding: 5px;
+  padding: 0.313rem;
   border-radius: 0.5em;
 }
 
@@ -276,7 +376,7 @@ footer > section {
 }
 
 .footer-navs-and-information {
-  max-width: 1600px;
+  max-width: 100rem;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
@@ -291,25 +391,41 @@ footer > section {
 
 .about-us-div nav {
   margin-top: 1rem;
+  line-height: 2;
+}
+
+.contact-us-div .email {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-div .email i {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
 }
 
 .soc-meds-nav {
   height: 100%;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: flex-end;
 }
 
-.soc-med-icon {
-  width: 30px;
+.soc-meds-nav .fa-brands {
+  width: 2.188rem;
+  height: 2.188rem;
   border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  padding: 0.781rem;
+  font-size: 0.75rem;
 }
 
 .line-separator {
-  border-bottom: 2px solid black;
+  border-bottom: 0.063rem solid black;
   margin: 2rem 0;
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
