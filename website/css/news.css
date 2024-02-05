@@ -1,0 +1,390 @@
+/* CSS DEFAULTS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+header,
+main,
+footer {
+  margin: 0 auto;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:not(:first-child) {
+  margin-top: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* GENERAL CSS */
+
+.width-80 {
+  width: 80%;
+  height: 30vh;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* MAIN CSS FLOW */
+
+html {
+  font-family: Poppins, Arial, Helvetica, Tahoma;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(160deg, #09032e 40%, #1608b2);
+  line-height: 1.5;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  height: 6.5rem;
+  padding: 2rem;
+  background-color: #09032e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0.5rem 0.375rem -0.375rem #0f0253;
+}
+
+.website-logo {
+  margin: 0.5rem 0;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.header-nav {
+  width: 70%;
+  max-width: 37.5rem;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav a:not(.contact-us-link):hover {
+  color: #ee7214;
+}
+
+.current-page {
+  position: relative;
+  color: #ee7214;
+}
+
+.header-nav .current-page::after {
+  content: url("../images/current-page-icon.png");
+  position: absolute;
+  left: -1rem;
+  bottom: -1rem;
+}
+
+.header-nav .contact-us-link {
+  background-color: #d80027;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+}
+
+.header-nav .contact-us-link:hover {
+  color: #070320;
+}
+
+/*Sign In*/
+.header-nav .sign-in .fa-solid {
+  font-size: 1.5rem;
+}
+
+.sign-in {
+  position: relative;
+}
+
+.hidden-text {
+  font-size: 0.8rem;
+  width: 4rem;
+  border-radius: 0.1rem;
+  color: #000;
+  background-color: #d9d9d9;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.3rem;
+}
+
+.sign-in .hidden-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sign-in:hover .hidden-text {
+  display: block;
+}
+
+main {
+  max-width: 100rem;
+  padding: 4rem 10%;
+  margin-bottom: 2rem;
+}
+
+.from-to-current-page {
+  margin-bottom: 1.5rem;
+}
+
+.from-page {
+  margin-right: 0.5rem;
+}
+
+.from-to-current-page .current-page {
+  margin-left: 0.5rem;
+}
+
+/* own code starts here */
+#gallery-grid {
+  display: grid;
+  grid-template-areas:
+    "Gallery1 Gallery1 Gallery2"
+    "Gallery1 Gallery1 Gallery3"
+    "Gallery1 Gallery1 Gallery4";
+  margin-bottom: 3rem;
+}
+
+#Gallery1 {
+  grid-area: Gallery1;
+}
+
+#Gallery2 {
+  grid-area: Gallery2;
+}
+
+#Gallery3 {
+  grid-area: Gallery3;
+}
+
+#Gallery4 {
+  grid-area: Gallery4;
+}
+
+/* adjust via css to overlap */
+#gallery-grid a {
+  position: relative;
+}
+
+#gallery-grid p {
+  position: absolute;
+  top: 90%;
+  font-size: 1rem;
+}
+
+#gallery-grid img {
+  width: 100%;
+  height: 100%;
+}
+
+/* article */
+.border-article {
+  background-color: #2825d0;
+  padding: 1rem;
+}
+
+/* API news */
+#news-container {
+  margin: 5rem 0;
+}
+
+#news-container img {
+  width: 100%;
+  min-height: 50vh;
+  border-radius: 5px;
+}
+
+#news-container a {
+  margin: 2rem 0 3rem 0;
+  padding: 0.5rem 3rem;
+  border-radius: 40px;
+  background: linear-gradient(45deg, #d80027, #fb9e3c);
+}
+
+/* footer codes */
+.subscribe-section {
+  max-width: 100rem;
+  padding: 0 10% 5rem;
+}
+
+.subscribe-section p {
+  line-height: 2;
+  margin-top: 0.5rem;
+}
+
+.subscribe-section h2,
+.subscribe-div-text .head {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.subscribe-div {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
+  border-radius: 1.25rem;
+}
+
+.subscribe-div-text {
+  max-width: 50%;
+}
+
+.subscription-form {
+  background-color: black;
+  padding: 0.313rem;
+  border-radius: 0.5em;
+}
+
+.subscription-form input[type="email"] {
+  min-width: 11ch;
+  max-width: 23ch;
+  background-color: black;
+  color: white;
+  padding: 0.4em 0.5em 0.4em 1em;
+  border: none;
+  outline: none;
+}
+
+.subscription-form .submit-button {
+  background-color: #d80027;
+  color: black;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.subscription-form > .submit-button:hover {
+  color: white;
+}
+
+.footer-section {
+  background-color: white;
+  color: black;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-navs-and-information {
+  max-width: 100rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.about-us-div,
+.soc-meds-nav {
+  min-width: max-content;
+}
+
+.about-us-div nav {
+  margin-top: 1rem;
+  line-height: 2;
+}
+
+.contact-us-div .email {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us-div .email i {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.soc-meds-nav {
+  height: 100%;
+  display: flex;
+  gap: 0.938rem;
+  align-items: flex-end;
+}
+
+.soc-meds-nav .fa-brands {
+  width: 2.188rem;
+  height: 2.188rem;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  padding: 0.781rem;
+  font-size: 0.75rem;
+}
+
+.line-separator {
+  border-bottom: 0.063rem solid black;
+  margin: 2rem 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+}

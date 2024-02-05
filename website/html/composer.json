@@ -1,0 +1,21 @@
+{
+    "name": "stephenperez/frontend",
+    "description": "Project for System Integration and Architecture",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "~6.5.0"
+    },
+    "license": "Unlicense",
+    "autoload": {
+        "psr-4": {
+            "Stephenperez\\Frontend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stephen Perez",
+            "email": "perezstephenmathew360@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
