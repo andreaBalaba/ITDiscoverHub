@@ -166,4 +166,13 @@
 
         return $result; 
     }
+
+    function updateUserInfo($email, $firstName, $lastName, $newemail, $password) {
+        global $conn;
+    
+        $sql = "UPDATE user SET firstName = '$firstName', lastName = '$lastName', email = '$newemail', password = '$password' WHERE email = '$email'";
+        $result = $conn->query($sql);
+    
+        return $result;
+    }
 ?>

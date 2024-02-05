@@ -186,4 +186,11 @@
     function compareCatalogItemsByDate($catalogItem1, $catalogItem2) {
         return $catalogItem2->releaseDate <=> $catalogItem1->releaseDate;
     }
+
+    function editProfile($email, $firstName, $lastName, $newemail, $password) {
+        $result = updateUserInfo($email, $firstName, $lastName, $newemail, $password);
+
+        return $result;
+    }
+
 ?>

@@ -14,6 +14,22 @@
             $this->email = $email;
             $this->password = $password;
         }        
+
+        public function getFirstName() {
+            return $this->firstName;
+        }
+        
+        public function getLastName() {
+            return $this->lastName;
+        }
+
+        public function getEmail() {
+            return $this->email;
+        }
+
+        public function getPassword() {
+            return $this->password;
+        }
     }
 
     class Smartphone {
@@ -96,5 +112,17 @@
             $this->category = $category;
             $this->model = $model;
         } 
+
+        public function getEmail() {
+            return $this->email;
+        }
+    
+        public function getCategory() {
+            return $this->category;
+        }
+    
+        public function getModel() {
+            return $this->model;
+        }
     }
 ?>
