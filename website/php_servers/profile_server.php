@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['email'] = $newEmail;
 
-        header("Location: profile.php");
+        header("Location: ../html/profile.php");
         exit();
     } else {
         echo "Failed to update user information.";
