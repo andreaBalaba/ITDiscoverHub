@@ -96,8 +96,8 @@ header {
 
 
 .user-icon img {
-  width: 4rem;
-  height: 4rem;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
   padding: 0.53rem;
   border-radius: 2rem;
   transition: opacity 0.3s ease-out;
@@ -155,7 +155,7 @@ header {
 /*Profile content*/
 .container {
  width: 100%;
- height: 125vh;
+ height: 150vh;
  display: flex;
  margin: 0;
  padding: 0;
@@ -184,6 +184,7 @@ header {
 .profile-image1 img {
   width: 150px; 
   height: 150px;
+  border-radius: 50%;
 }
 
 .profile-info h3 {
@@ -267,7 +268,7 @@ header {
 
 .general-details {
   width: 100%;
-  padding: 0 80px;
+  padding: 40px 80px 0 80px;
   display: flex; 
   flex-direction: column; 
   align-items: center; 
@@ -275,42 +276,23 @@ header {
 }
 
 .update-profile-pic {
-  display: flex; 
-  flex-direction: row;
-  gap: 60px;
-  align-items: center;
-  position: relative;
-  top: 2rem;
-  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.update-profile-pic img {
-  width: 200px;
-  height: 200px;
+#profileImage {
+  width: 200px; /* Adjust the max-width as needed */
+  height: 200px; /* Adjust the max-height as needed */
+  border-radius: 50%;
 }
 
-.update-profile-pic button {
-  width: 235px;
-  height: 50px;
-  border: none;
-  color: white;
-  font-size: 1.1rem;
-  background: linear-gradient(92.48deg, #D80027 2.08%, #FB9E3C 117.25%);
-  border-radius: 40px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-out;
-}
-
-.update-profile-pic button:hover {
-  background: linear-gradient(92.48deg, #C50023 2.08%, #E58535 117.25%);
-}
 
 .update-user-details {
   display: flex;
   justify-content: center;
 }
 
-.update-user-details form input {
+.update-user-details input {
   width: 500px;
   height: 40px;
   border: none;
@@ -327,8 +309,31 @@ header {
   flex-direction: column;
   justify-content: left;
   position: relative;
-  top: 50px;
   padding-left: 20px;
+}
+
+.update-user-details .form-group .upload-label {
+  position: relative;
+  width: fit-content;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  background: linear-gradient(92.48deg, #D80027 2.08%, #FB9E3C 117.25%);
+  transition: background-color 0.3s ease-out;
+}
+
+.update-user-details .form-group .upload-label:hover {
+  background: linear-gradient(92.48deg, #C50023 2.08%, #E58535 117.25%);
+}
+
+.input-hidden {
+  display: none;
 }
 
 .update-user-details .edit-name {
@@ -340,7 +345,7 @@ header {
   width: 235px;
 }
 
-.update-user-details form label {
+.update-user-details label {
   display: block;
   margin-top: 30px;
   font-weight: bolder;
@@ -348,11 +353,11 @@ header {
   color: rgba(8, 8, 8, 0.66);
 }
 
-.update-user-details form button {
+.update-user-details button {
   position: relative;
   width: 120px;
   height: 40px;
-  top: 100px;
+  top: 50px;
   left: 130px;
   margin-right: 30px;
   border: none;

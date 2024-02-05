@@ -60,7 +60,9 @@ $wishlists = getWishlistsByEmail($userEmail);
             <li><a href="news.html">News</a></li>
             <li><a class="contact-us" href="contact-us.html">Contact us</a></li>
             <li class="dropdown-wrapper">
-              <a class="user-icon" href="profile.php"><img src="../images/profile-gradient-icon.png" alt="Profile Picture"></a>
+              <a class="user-icon" href="profile.php"><img src="<?php echo htmlspecialchars($currentUser->getProfilePicture()); ?>" 
+              alt="Profile Picture">
+              </a>
               <span class="drop-icon" tabindex="0" onclick="toggleDropdown(this)">
                 <i class="fa-solid fa-angle-down"></i>
               </span>
@@ -82,7 +84,7 @@ $wishlists = getWishlistsByEmail($userEmail);
       <aside class="left-aside">
         <div class="Edit-Profile">
           <div class="profile-image1">
-            <img src="../images/profile-gradient-icon.png" alt="Profile Picture">
+             <img src="<?php echo htmlspecialchars($currentUser->getProfilePicture()); ?>" alt="Profile Picture">
           </div>
           <div class="profile-info">
             <h3>Edit Profile</h3>
@@ -109,12 +111,19 @@ $wishlists = getWishlistsByEmail($userEmail);
       <section class="main-content">
         <div class="general-details">
           <div class="update-profile-pic">
-            <img src="../images/profile-gradient-icon.png" alt="Profile Picture">
-            <button>Update Profile Picture</button>
+              <img id="profileImage" src="<?php echo htmlspecialchars($currentUser->getProfilePicture()); ?>" alt="Profile Picture">
           </div>
           <div class="update-user-details">
-            <form id="updateUserForm" action="../php_servers/profile_server.php" method="post">
+          <form id="updateUserAndPicForm" action="../php_servers/profile_server.php" method="post"
+                        enctype="multipart/form-data">              
 
+              <div class="form-group">
+                    <div class="change-pic">
+                        <label for="profilePicture" class="upload-label">Update Profile Picture</label>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*"
+                                    class="input-hidden">
+                    </div>
+              </div>
               <div class="edit-name">
                 <div class="form-group">
                     <label class="firstName">First name</label>
@@ -141,7 +150,7 @@ $wishlists = getWishlistsByEmail($userEmail);
                         
                         <button type="reset" value="Reset">Cancel</button>
                         <button type="submit">Save</button>
-              </form>
+          </form>
           </div>
         </div>
         
@@ -203,7 +212,75 @@ $wishlists = getWishlistsByEmail($userEmail);
                   }
               });
 
-              const form = document.getElementById("updateUserForm");
+              const updateUserAndPicForm = document.getElementById("updateUserAndPicForm");
+              const profilePictureInput = document.getElementById("profilePicture");
+              const profileImage = document.getElementById("profileImage");
+              let isProfilePictureChanged = false;
+
+              let isFirstNameChanged = false;
+              let isLastNameChanged = false;
+              let isEmailChanged = false;
+              let isPasswordChanged = false;
+
+
+              updateUserAndPicForm.addEventListener("submit", function (event) {
+                  event.preventDefault();
+
+                  const formData = new FormData(updateUserAndPicForm);
+
+                  if (isProfilePictureChanged) {
+                      formData.append('isProfilePictureChanged', true);
+                  }
+                  if (isFirstNameChanged) {
+                      formData.append('isFirstNameChanged', true);
+                  }
+                  if (isLastNameChanged) {
+                      formData.append('isLastNameChanged', true);
+                  }
+                  if (isEmailChanged) {
+                      formData.append('isEmailChanged', true);
+                  }
+                  if (isPasswordChanged) {
+                      formData.append('isPasswordChanged', true);
+                  }
+
+                  fetch("../php_servers/profile_server.php", {
+                      method: "POST",
+                      body: formData
+                  })
+                      .then(response => response.text())
+                      .then(data => {
+
+                          isProfilePictureChanged = false;
+                          isFirstNameChanged = false;
+                          isLastNameChanged = false;
+                          isEmailChanged = false;
+                          isPasswordChanged = false;
+
+                          // Redirect to the profile page after successful update
+                          window.location.href = "../html/profile.php";
+                      })
+                      .catch(error => {
+                          console.error("Error updating profile details:", error);
+                          alert("Failed to update profile details. Please try again.");
+                      });
+              });
+
+
+              profilePictureInput.addEventListener("change", function () {
+                  isProfilePictureChanged = true;
+                  const file = profilePictureInput.files[0];
+
+                  if (file) {
+                      const reader = new FileReader();
+                      reader.onload = function (e) {
+                          profileImage.src = e.target.result;
+                      };
+                      reader.readAsDataURL(file);
+                  }
+              });
+
+
               const initialFormValues = {
                   firstName: "<?php echo htmlspecialchars($currentUser->getFirstName()); ?>",
                   lastName: "<?php echo htmlspecialchars($currentUser->getLastName()); ?>",
@@ -213,34 +290,33 @@ $wishlists = getWishlistsByEmail($userEmail);
 
               const cancelButton = document.querySelector('button[type="reset"]');
               cancelButton.addEventListener('click', function () {
-                  if (isFormChanged()) {
+                  if (isFormChanged() || isProfilePictureChanged) {
                       const confirmDiscard = confirm("You have unsaved changes. Are you sure you want to discard them?");
                       if (confirmDiscard) {
                           alert("Changes discarded!");
                           window.location.reload();
                       }
                   } else {
-                      // No changes, proceed with reload
-                      window.location.reload();
+                      alert("No changes made.");
                   }
               });
 
               const saveButton = document.querySelector('button[type="submit"]');
-              saveButton.addEventListener('click', function () {
-                    if (isFormChanged()) {
-                        alert("Changes saved!");
-                    } else {
-                        alert("No changes made. Please update the form before saving.");
-                    }
+              saveButton.addEventListener('click', function (event) {
+                  if (!isFormChanged() && !isProfilePictureChanged) {
+                      event.preventDefault(); // Prevent the form from submitting when no changes are made
+                      alert("No changes made. Please update the form before saving.");
+                  } else {
+                      alert("Changes saved!");
+                  }
               });
 
-              
               function isFormChanged() {
                   return (
-                      form.elements.firstName.value !== initialFormValues.firstName ||
-                      form.elements.lastName.value !== initialFormValues.lastName ||
-                      form.elements.email.value !== initialFormValues.email ||
-                      form.elements.password.value !== initialFormValues.password
+                      updateUserAndPicForm.elements.firstName.value !== initialFormValues.firstName ||
+                      updateUserAndPicForm.elements.lastName.value !== initialFormValues.lastName ||
+                      updateUserAndPicForm.elements.email.value !== initialFormValues.email ||
+                      updateUserAndPicForm.elements.password.value !== initialFormValues.password
                   );
               }
 

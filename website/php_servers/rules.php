@@ -187,10 +187,12 @@
         return $catalogItem2->releaseDate <=> $catalogItem1->releaseDate;
     }
 
-    function editProfile($email, $firstName, $lastName, $newemail, $password) {
-        $result = updateUserInfo($email, $firstName, $lastName, $newemail, $password);
-
-        return $result;
+    // update user's profile 
+    function editProfile($email, $firstName, $lastName, $newemail, $password, $profilePicture) {
+        $resultUserInfo = updateUserInfo($email, $firstName, $lastName, $newemail, $password);
+        $resultProfilePic = updateProfilePicture($email, $profilePicture);
+    
+        return $resultUserInfo && $resultProfilePic;
     }
 
 ?>

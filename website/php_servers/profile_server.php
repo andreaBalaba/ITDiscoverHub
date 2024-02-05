@@ -16,6 +16,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $currentUserEmail = $_SESSION['email'];
 
+    if (isset($_FILES['profilePicture']) && $_FILES['profilePicture']['error'] == UPLOAD_ERR_OK) {
+        $targetDir = '../images/';
+        $targetFile = $targetDir . basename($_FILES['profilePicture']['name']);
+
+        // Move the uploaded file to the destination
+        if (move_uploaded_file($_FILES['profilePicture']['tmp_name'], $targetFile)) {
+            // Update the user's profile picture path in the database
+            updateProfilePicture($currentUserEmail, $targetFile);
+        } else {
+            echo "Failed to upload profile picture.";
+            exit(); 
+        }
+    }
+
     if (updateUserInfo($currentUserEmail, $firstName, $lastName, $newEmail, $newPassword)) {
 
         session_destroy();
@@ -29,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Failed to update user information.";
     }
+
 }
 
 if (isset($_GET['category']) && isset($_GET['model'])) {
