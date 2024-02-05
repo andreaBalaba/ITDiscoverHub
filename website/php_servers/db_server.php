@@ -136,7 +136,7 @@
     function getWishlistsByEmail($email) {
         global $conn;
 
-        $sql = "SELECT `email`, `category`, `model` FROM wishlist WHERE email='" . $email . "'";
+        $sql = "SELECT `email`, `category`, `model` FROM userWishlist WHERE email='" . $email . "'";
         $result = $conn->query($sql);
 
         $wishlists = [];    // will be array of Wishlist objects
@@ -159,7 +159,7 @@
     function deleteWishlist($email, $category, $model) {
         global $conn;
         
-        $sql = "DELETE FROM wishlist WHERE email='" . $email . "'AND category='" . $category . "'AND model='" . $model . "'";
+        $sql = "DELETE FROM userWishlist WHERE email='" . $email . "'AND category='" . $category . "'AND model='" . $model . "'";
 	    $result = $conn->query($sql);
 
         echo mysqli_error($conn);
